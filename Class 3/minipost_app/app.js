@@ -8,7 +8,7 @@ const app = express();
 
 require('dotenv/config');
 
-// receiving the JSON, without the body parser package
+// receiving the JSON, without the body parser package ..
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 
