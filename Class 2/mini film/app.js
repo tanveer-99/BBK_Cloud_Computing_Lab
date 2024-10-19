@@ -2,10 +2,12 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 
+require('dotenv/config');
+
 const app = express();
 
 
-const url = "mongodb+srv://tanvir:tanvir@cluster0.7xdebar.mongodb.net/cloud_computing_lab?retryWrites=true&w=majority&appName=Cluster0";
+const url = process.env.DB_CONNECTOR;
 
 mongoose.connect(url)
 .then(() => { 
